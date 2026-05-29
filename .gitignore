@@ -1,0 +1,31 @@
+# 環境変数
+scripts/.env
+
+# 依存パッケージ
+scripts/__pycache__/
+scripts/*.pyc
+scripts/venv/
+scripts/.venv/
+
+# LLM出力結果（コミット不要）
+scripts/result.json
+
+# Node.js
+node_modules/
+*/node_modules/
+
+# ビルド成果物
+frontend/dist/
+backend/dist/
+backend/lib/
+
+# GitHub App 秘密鍵（絶対にコミットしない！）
+*.pem
+*.p8
+backend/private-key*.pem
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+.env
