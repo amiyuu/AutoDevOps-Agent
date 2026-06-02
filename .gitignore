@@ -29,3 +29,9 @@ backend/private-key*.pem
 firebase-debug.log
 
 .env
+# Secrets
+scripts/secrets/
+private-key.pem
+*.pem
+
+id_etc.md
