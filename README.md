@@ -7,7 +7,7 @@
 ```
 AutoDevOps-Agent/
 ├── scripts/      # Phase 1: ローカル検証スクリプト（Python + Vertex AI）
-├── backend/      # Phase 2: Cloud Functions（TypeScript）
+├── scripts/      # Phase 1 & 2: LLM検証およびGitHub/Firestore連携パイプライン
 ├── frontend/     # Phase 3: React + Vite 管理UI
 └── firestore.rules
 ```
@@ -68,11 +68,59 @@ python analyze.py
 🎉 Phase 1 検証完了！
 ```
 
+## クイックスタート（Phase 2: GitHub & Firestore パイプライン連携）
+
+Phase 2 では、Phase 1 で生成した修正コードを GitHub にコミットしてプルリクエストを作成し、Firestore にデータを保存する一連の流れを実行します。
+
+### 前提条件
+- GitHub App の作成（`App ID`, `Installation ID`, `private-key.pem` の取得）
+- Firestore データベースの有効化（GCP プロジェクト内）
+- 修正対象の GitHub リポジトリの準備
+
+### 手順
+
+```bash
+# 1. scripts ディレクトリへ移動
+cd scripts
+
+# 2. 依存パッケージのインストール
+pip install -r requirements.txt
+
+# 3. .env ファイルに GitHub App の情報を追記
+# GITHUB_APP_ID, GITHUB_INSTALLATION_ID, GITHUB_REPO 等を設定
+
+# 4. secrets/private-key.pem を配置
+# ダウンロードしたプライベートキーを配置（.gitignore に追加済み）
+
+# 5. パイプラインの実行
+python pipeline.py
+```
+
+### 出力例
+
+```
+============================================================
+  AutoDevOps Agent — Phase 2: Pipeline Execution
+============================================================
+🔌 初期化中...
+📥 GitHubからファイルを取得中...
+🧠 Geminiにバグ解析を依頼中...
+✅ 解析完了: ...
+💾 Firestoreに保存中... (fix_id: xxxxxxxx)
+🌿 GitHubブランチ作成中...
+📝 修正コードをコミット中...
+🚀 Pull Requestを作成中...
+✅ PR作成成功: https://github.com/.../pull/1
+🔄 FirestoreにPR URLを更新中...
+============================================================
+🎉 パイプライン実行完了！
+```
+
 ## 開発フェーズ
 
 | フェーズ | 内容 | 状態 |
 |----------|------|------|
 | Phase 1 | LLM検証スクリプト | ✅ 実装済み |
-| Phase 2 | Cloud Functions + GitHub連携 | 🔜 実装予定 |
-| Phase 3 | React 管理UI | 🔜 実装予定 |
+| Phase 2 | GitHub/Firestore連携パイプライン | ✅ 実装済み |
+| Phase 3 | Next.js 管理UI（ダッシュボード） | 🔜 実装予定 |
 | Phase 4 | 本番品質化 | 🔜 実装予定 |
