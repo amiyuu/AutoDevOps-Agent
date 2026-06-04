@@ -1,0 +1,30 @@
+{
+  "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/AsyncAwait/CollectionReference+AsyncAwait.swift" : {
+    "const-values" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.swiftconstvalues",
+    "dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.d",
+    "diagnostics" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.dia",
+    "object" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.o",
+    "swift-dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+AsyncAwait.swiftdeps"
+  },
+  "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodableErrors.swift" : {
+    "const-values" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.swiftconstvalues",
+    "dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.d",
+    "diagnostics" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.dia",
+    "object" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.o",
+    "swift-dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodableErrors.swiftdeps"
+  },
+  "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodablePassThroughTypes.swift" : {
+    "const-values" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.swiftconstvalues",
+    "dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.d",
+    "diagnostics" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.dia",
+    "object" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.o",
+    "swift-dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CodablePassThroughTypes.swiftdeps"
+  },
+  "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CollectionReference+WriteEncodable.swift" : {
+    "const-values" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.swiftconstvalues",
+    "dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.d",
+    "diagnostics" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.dia",
+    "object" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.o",
+    "swift-dependencies" : "/Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/arm64/CollectionReference+WriteEncodable.swiftdeps"
+  }
+}

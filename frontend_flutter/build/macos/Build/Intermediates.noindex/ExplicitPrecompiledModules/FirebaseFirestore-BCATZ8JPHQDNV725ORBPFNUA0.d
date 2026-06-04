@@ -1,0 +1,38 @@
+moduledependenciestarget: \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/module.modulemap \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/Target\ Support\ Files/FirebaseFirestore/FirebaseFirestore-umbrella.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/System/Library/Frameworks/Cocoa.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk/usr/include/DarwinFoundation2.modulemap \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRAggregateField.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestoreInternal.build/module.modulemap \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRAggregateQuery.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRAggregateQuerySnapshot.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRAggregateSource.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRCollectionReference.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRDocumentChange.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRDocumentReference.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRDocumentSnapshot.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FirebaseFirestore.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFieldPath.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFieldValue.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFilter.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFirestore.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFirestoreErrors.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFirestoreSettings.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRFirestoreSource.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRGeoPoint.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRListenerRegistration.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRLoadBundleTask.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRLocalCacheSettings.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRPersistentCacheIndexManager.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRQuery.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRQuerySnapshot.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRSnapshotListenOptions.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRSnapshotMetadata.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRTransaction.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRTransactionOptions.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRVectorValue.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/FirebaseFirestore/FirebaseFirestoreInternal/FirebaseFirestore/FIRWriteBatch.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h
