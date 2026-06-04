@@ -1,0 +1,38 @@
+dependencies: \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Modules/module.modulemap \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/rsa_crypt.c \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/Target\ Support\ Files/BoringSSL-GRPC/BoringSSL-GRPC-prefix.pch \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/base.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/DarwinFoundation2.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/DarwinFoundation1.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/DarwinFoundation3.modulemap \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/is_boringssl.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/opensslconf.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/target.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/boringssl_prefix_symbols.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/err.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/rsa.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/engine.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/ex_data.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/stack.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/thread.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/bn.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/rand.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/mem.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/evp.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/evp_errors.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/aead.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/base64.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/cipher.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/digest.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/nid.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/../fipsmodule/bn/internal.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/../fipsmodule/bn/../../internal.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/arm_arch.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/crypto.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/BoringSSL-GRPC/openssl_grpc.framework/Headers/sha.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/../fipsmodule/rsa/internal.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/../fipsmodule/rsa/../../internal.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/../internal.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/BoringSSL-GRPC/src/crypto/rsa_extra/internal.h

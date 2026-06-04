@@ -1,0 +1,41 @@
+dependencies: \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/src/core/ext/transport/chttp2/transport/hpack_encoder_table.cc \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/Target\ Support\ Files/gRPC-Core/gRPC-Core-prefix.pch \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/src/core/ext/transport/chttp2/transport/hpack_encoder_table.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/include/grpc/support/port_platform.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/src/core/ext/transport/chttp2/transport/hpack_constants.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/check.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/check_impl.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/optimization.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/config.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/options.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/policy_checks.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/check_op.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/attributes.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/nullguard.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/nullstream.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/log_severity.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/strings/string_view.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/nullability.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/internal/nullability_impl.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/meta/type_traits.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/internal/throw_delegate.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/macros.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/port.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/strip.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/log_message.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/base/internal/errno_saver.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/log_entry.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/config.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/time/time.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/time/civil_time.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/time/internal/cctz/include/cctz/civil_time.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/time/internal/cctz/include/cctz/civil_time_detail.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/time/internal/cctz/include/cctz/time_zone.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/types/span.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/types/internal/span.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/algorithm/algorithm.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/log_sink.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/strings/has_absl_stringify.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/conditions.h \
+  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Products/Debug/abseil/absl.framework/Headers/log/internal/voidify.h
