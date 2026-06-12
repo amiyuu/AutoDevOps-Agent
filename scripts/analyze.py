@@ -109,6 +109,8 @@ def analyze_bug(error_log: str, source_code: str, file_name: str) -> dict:
         ),
     )
 
+    if response.text is None:
+        raise ValueError("Gemini からの応答が空でした。")
     raw_text = response.text.strip()
     result = json.loads(raw_text)
     return result
