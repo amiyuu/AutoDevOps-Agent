@@ -17,7 +17,7 @@ class FirestoreClient:
             })
             
         self.db = firestore.client()
-        self.collection_name = "auto_fixes"
+        self.collection_name = "incidents"
 
     def save_fix(self, fix_id: str, error_message: str, target_file: str, original_code: str, fixed_code: str) -> None:
         """

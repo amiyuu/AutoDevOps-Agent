@@ -14,6 +14,28 @@ class DashboardScreen extends ConsumerWidget {
     final state = ref.watch(incidentProvider);
     final notifier = ref.read(incidentProvider.notifier);
 
+    ref.listen<IncidentState>(incidentProvider, (previous, next) {
+      if (next.errorMessage != null && next.errorMessage != previous?.errorMessage) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              next.errorMessage!,
+              style: const TextStyle(color: Colors.white),
+            ),
+            backgroundColor: const Color(0xFFFF3366),
+            duration: const Duration(seconds: 8),
+            action: SnackBarAction(
+              label: '閉じる',
+              textColor: Colors.white,
+              onPressed: () {
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              },
+            ),
+          ),
+        );
+      }
+    });
+
     // 未修復のインシデントがあるか確認
     final unresolvedCount = state.incidents.where((i) => i.status != 'completed' && i.status != 'failed').length;
     final hasActiveIncident = unresolvedCount > 0;

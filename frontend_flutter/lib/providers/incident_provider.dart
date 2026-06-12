@@ -33,12 +33,14 @@ class IncidentState {
   final bool isDemoMode;
   final bool isFirebaseConnected;
   final String? activeIncidentId; // 詳細画面で開いているインシデントID
+  final String? errorMessage;
 
   IncidentState({
     required this.incidents,
     required this.isDemoMode,
     required this.isFirebaseConnected,
     this.activeIncidentId,
+    this.errorMessage,
   });
 
   IncidentState copyWith({
@@ -46,12 +48,14 @@ class IncidentState {
     bool? isDemoMode,
     bool? isFirebaseConnected,
     String? activeIncidentId,
+    String? errorMessage,
   }) {
     return IncidentState(
       incidents: incidents ?? this.incidents,
       isDemoMode: isDemoMode ?? this.isDemoMode,
       isFirebaseConnected: isFirebaseConnected ?? this.isFirebaseConnected,
       activeIncidentId: activeIncidentId ?? this.activeIncidentId,
+      errorMessage: errorMessage ?? this.errorMessage,
     );
   }
 }
@@ -66,6 +70,7 @@ class IncidentNotifier extends StateNotifier<IncidentState> {
           incidents: [..._mockInitialIncidents],
           isDemoMode: true, // デフォルトはデモモード（プレゼン安全対策）
           isFirebaseConnected: false,
+          errorMessage: null,
         )) {
     // 起動時にデモ用の初期インシデントを読み込む
     _setupFirestoreListener();
@@ -81,7 +86,7 @@ class IncidentNotifier extends StateNotifier<IncidentState> {
 
     try {
       final firestore = FirebaseFirestore.instance;
-      state = state.copyWith(isFirebaseConnected: true);
+      state = state.copyWith(isFirebaseConnected: true, errorMessage: null);
       
       _firestoreSubscription = firestore
           .collection('incidents')
@@ -95,20 +100,29 @@ class IncidentNotifier extends StateNotifier<IncidentState> {
             // モック履歴とFirestoreデータを統合
             state = state.copyWith(
               incidents: [...firestoreIncidents, ..._mockInitialIncidents],
+              errorMessage: null,
             );
           }, onError: (e) {
             print("Firestore Error: $e. Falling back to Demo Mode.");
-            state = state.copyWith(isDemoMode: true, isFirebaseConnected: false);
+            state = state.copyWith(
+              isDemoMode: true, 
+              isFirebaseConnected: false,
+              errorMessage: "Firestore Error: $e",
+            );
           });
     } catch (e) {
       print("Firebase not initialized or failed: $e. Using local Demo Mode.");
-      state = state.copyWith(isDemoMode: true, isFirebaseConnected: false);
+      state = state.copyWith(
+        isDemoMode: true, 
+        isFirebaseConnected: false,
+        errorMessage: "Firebase not initialized or failed: $e",
+      );
     }
   }
 
   void toggleDemoMode() {
     final newDemoMode = !state.isDemoMode;
-    state = state.copyWith(isDemoMode: newDemoMode);
+    state = state.copyWith(isDemoMode: newDemoMode, errorMessage: null);
     
     if (newDemoMode) {
       _firestoreSubscription?.cancel();

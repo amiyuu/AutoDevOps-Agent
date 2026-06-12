@@ -64,8 +64,7 @@ def load_file(path: str | Path) -> str:
 
 def build_prompt(error_log: str, source_code: str, file_name: str) -> str:
     """LLMに渡すプロンプトを構築する"""
-    return f"""
-あなたは優秀なソフトウェアエンジニアです。
+    return f"""あなたは優秀なソフトウェアエンジニアです。
 以下の本番エラーログとソースコードを分析し、バグを修正してください。
 
 ## エラーログ
@@ -83,13 +82,13 @@ def build_prompt(error_log: str, source_code: str, file_name: str) -> str:
 2. バグを修正した「ファイル全体のコード」を出力してください。
    - git diff 形式ではなく、修正後のファイル全体を出力すること。
    - コードのインデントや構造を変更しないこと。
-3. 必ず以下のJSON形式のみで回答してください。余分なテキストは一切含めないこと。
+3. 以下のフォーマットで厳密に回答してください:
 
-{{
-  "reason": "エラーの原因と修正内容の説明（日本語）",
-  "fixed_code": "修正後のJavaScriptコード全体（文字列）"
-}}
-""".strip()
+===REASON===
+ここにエラーの原因と修正内容を日本語で記述する
+===CODE===
+ここに修正後のファイル全体のコードをそのまま記述する（コードブロック記号不要）
+===END===""".strip()
 
 
 def analyze_bug(error_log: str, source_code: str, file_name: str) -> dict:
@@ -104,16 +103,31 @@ def analyze_bug(error_log: str, source_code: str, file_name: str) -> dict:
         config=types.GenerateContentConfig(
             temperature=0.1,
             max_output_tokens=8192,
-            response_mime_type="application/json",  # JSON モード（Structured Output）
-            response_schema=BugAnalysis,
         ),
     )
 
     if response.text is None:
         raise ValueError("Gemini からの応答が空でした。")
+
     raw_text = response.text.strip()
-    result = json.loads(raw_text)
-    return result
+
+    # セパレータ形式でパース
+    reason_match = re.search(r"===REASON===\s*(.+?)\s*===CODE===", raw_text, re.DOTALL)
+    code_match = re.search(r"===CODE===\s*(.+?)\s*===END===", raw_text, re.DOTALL)
+
+    if reason_match and code_match:
+        return {
+            "reason": reason_match.group(1).strip(),
+            "fixed_code": code_match.group(1).strip(),
+        }
+
+    # フォールバック: JSON パース（コードブロック除去してから試みる）
+    cleaned = re.sub(r"^```(?:json)?\s*", "", raw_text, flags=re.MULTILINE)
+    cleaned = re.sub(r"\s*```\s*$", "", cleaned, flags=re.MULTILINE)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        raise ValueError(f"Gemini の応答を解析できませんでした。\n--- 応答内容 ---\n{raw_text[:500]}")
 
 
 def main():

@@ -3,13 +3,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'screens/dashboard_screen.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
   // Firebaseの初期化を試みますが、設定が無い場合やローカル検証時はエラーを握り潰して
   // モックモードで安全に起動できるようにします。
   try {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     print("Firebase core initialized successfully.");
   } catch (e) {
     print("Firebase initialization skipped/failed: $e. Running in standalone mode.");
