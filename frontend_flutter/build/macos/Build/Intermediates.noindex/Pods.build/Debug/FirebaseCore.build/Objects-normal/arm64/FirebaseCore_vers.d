@@ -1,3 +1,0 @@
-dependencies: \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCore.build/module.modulemap \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCore.build/DerivedSources/FirebaseCore_vers.c

@@ -1,5 +1,0 @@
-dependencies: \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/src/core/ext/transport/chttp2/transport/decode_huff.cc \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/Target\ Support\ Files/gRPC-Core/gRPC-Core-prefix.pch \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/src/core/ext/transport/chttp2/transport/decode_huff.h \
-  /Users/sakauchikanato/hackathon/AutoDevOps-Agent/frontend_flutter/macos/Pods/gRPC-Core/include/grpc/support/port_platform.h
