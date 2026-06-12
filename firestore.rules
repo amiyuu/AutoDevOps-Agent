@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // AutoDevOps-Agent インシデントデータ用のセキュリティルール
+    // 開発・検証用として一時的に公開していますが、本番品質化時にFirebase Authによる制限を追加します。
+    
+    // バックエンド（Python/scripts）用コレクション
+    match /auto_fixes/{document} {
+      allow read, write: if true;
+    }
+    
+    // フロントエンド（Flutter）用コレクション
+    match /incidents/{document} {
+      allow read, write: if true;
+    }
+  }
+}
