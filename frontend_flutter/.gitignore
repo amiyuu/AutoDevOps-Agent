@@ -43,8 +43,3 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-
-frontend_flutter/build/
-frontend_flutter/macos/Pods/
-frontend_flutter/.dart_tool/
-frontend_flutter/windows/flutter/ephemeral/
