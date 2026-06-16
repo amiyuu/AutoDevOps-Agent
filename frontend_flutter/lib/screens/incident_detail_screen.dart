@@ -537,12 +537,14 @@ class IncidentDetailScreen extends ConsumerWidget {
         throw 'Could not launch $urlString';
       }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('リンクを開けませんでした: $urlString'),
-          backgroundColor: const Color(0xFFFF3366),
-        ),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('リンクを開けませんでした: $urlString'),
+            backgroundColor: const Color(0xFFFF3366),
+          ),
+        );
+      }
     }
   }
 }

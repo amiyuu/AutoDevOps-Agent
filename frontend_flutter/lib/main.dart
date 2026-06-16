@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'screens/dashboard_screen.dart';
+import 'screens/login_screen.dart';
+import 'providers/auth_provider.dart';
 
 import 'firebase_options.dart';
 
@@ -57,7 +59,38 @@ class AutoDevOpsApp extends StatelessWidget {
           }),
         ),
       ),
-      home: const DashboardScreen(),
+      home: const AuthGate(),
+    );
+  }
+}
+
+// ログイン状態に応じて画面を切り替えるゲートウィジェット
+class AuthGate extends ConsumerWidget {
+  const AuthGate({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authStateProvider);
+
+    return authState.when(
+      data: (user) {
+        if (user != null) {
+          // ログイン済み → ダッシュボードへ
+          return const DashboardScreen();
+        } else {
+          // 未ログイン → ログイン画面へ
+          return const LoginScreen();
+        }
+      },
+      loading: () => const Scaffold(
+        backgroundColor: Color(0xFF0D0E12),
+        body: Center(
+          child: CircularProgressIndicator(
+            color: Color(0xFF00F0FF),
+          ),
+        ),
+      ),
+      error: (e, _) => const LoginScreen(),
     );
   }
 }

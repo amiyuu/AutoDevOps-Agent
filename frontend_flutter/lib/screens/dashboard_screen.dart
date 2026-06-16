@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../providers/incident_provider.dart';
+import '../providers/auth_provider.dart';
 import '../models/incident.dart';
 import 'incident_detail_screen.dart';
 
@@ -55,6 +57,45 @@ class DashboardScreen extends ConsumerWidget {
           ),
         ),
         actions: [
+          // ユーザーメールバッジ
+          Consumer(
+            builder: (context, ref, _) {
+              final user = FirebaseAuth.instance.currentUser;
+              if (user == null) return const SizedBox.shrink();
+              return Container(
+                margin: const EdgeInsets.symmetric(vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF00F0FF).withOpacity(0.08),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFF00F0FF).withOpacity(0.3),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(
+                      Icons.account_circle_outlined,
+                      color: Color(0xFF00F0FF),
+                      size: 14,
+                    ),
+                    const SizedBox(width: 5),
+                    Text(
+                      user.email ?? 'Admin',
+                      style: GoogleFonts.outfit(
+                        fontSize: 11,
+                        color: const Color(0xFF00F0FF),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+          const SizedBox(width: 8),
           // デモモード切り替えトグル
           Row(
             children: [
@@ -77,7 +118,70 @@ class DashboardScreen extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 4),
+          // ログアウトボタン
+          IconButton(
+            tooltip: 'サインアウト',
+            icon: const Icon(
+              Icons.logout_rounded,
+              color: Colors.grey,
+              size: 20,
+            ),
+            onPressed: () async {
+              final confirm = await showDialog<bool>(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  backgroundColor: const Color(0xFF161822),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    side: BorderSide(
+                      color: const Color(0xFF00F0FF).withOpacity(0.3),
+                    ),
+                  ),
+                  title: Text(
+                    'サインアウト',
+                    style: GoogleFonts.outfit(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  content: Text(
+                    'ダッシュボードからサインアウトしますか？',
+                    style: TextStyle(color: Colors.grey.shade400),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx, false),
+                      child: Text(
+                        'キャンセル',
+                        style: TextStyle(color: Colors.grey.shade500),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () => Navigator.pop(ctx, true),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF3366),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: Text(
+                        'サインアウト',
+                        style: GoogleFonts.outfit(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+              if (confirm == true) {
+                await ref.read(authNotifierProvider.notifier).signOut();
+              }
+            },
+          ),
+          const SizedBox(width: 4),
         ],
       ),
       body: Container(
