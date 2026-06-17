@@ -75,3 +75,10 @@ class GitHubAppClient:
             base=base_branch
         )
         return pr.html_url
+
+    def merge_pull_request(self, repo_name: str, pr_number: int) -> bool:
+        """指定したプルリクエストをマージする"""
+        repo = self.client.get_repo(repo_name)
+        pr = repo.get_pull(pr_number)
+        status = pr.merge(commit_message="Auto-merged by AutoDevOps Agent")
+        return status.merged

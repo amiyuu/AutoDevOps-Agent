@@ -36,11 +36,17 @@ def main():
     error_log_path = "sample_error/error_log.txt"
     error_log = load_file(error_log_path)
     
-    # 3. GitHubから対象ファイルの最新コードを取得
+    # 3. サーキットブレーカーの確認
+    print(f"🛡️ サーキットブレーカーを確認中: {GITHUB_TARGET_FILE}")
+    if firestore.check_circuit_breaker(GITHUB_TARGET_FILE, max_attempts=3, time_window_hours=1):
+        print("🚨 サーキットブレーカー発動: 短期間に同一ファイルの修復試行が多すぎます。無限ループを防止するため処理を中断します。")
+        return
+
+    # 4. GitHubから対象ファイルの最新コードを取得
     print(f"📥 GitHubからファイルを取得中: {GITHUB_REPO}/{GITHUB_TARGET_FILE} (branch: {GITHUB_DEFAULT_BRANCH})")
     original_code, current_sha = github.get_file_content(GITHUB_REPO, GITHUB_TARGET_FILE, GITHUB_DEFAULT_BRANCH)
     
-    # 4. LLM (Gemini) によるバグ解析と修正コード生成
+    # 5. LLM (Gemini) によるバグ解析と修正コード生成
     print("🧠 Geminiにバグ解析を依頼中...")
     result = analyze_bug(error_log, original_code, GITHUB_TARGET_FILE)
     reason = result.get("reason", "No reason provided.")
@@ -52,7 +58,7 @@ def main():
         
     print(f"✅ 解析完了: {reason}")
     
-    # 5. Firestoreに保存 (pending)
+    # 6. Firestoreに保存 (pending)
     fix_id = str(uuid.uuid4())
     print(f"💾 Firestoreに保存中... (fix_id: {fix_id})")
     firestore.save_fix(
@@ -63,7 +69,7 @@ def main():
         fixed_code=fixed_code
     )
     
-    # 6. GitHub に修正を反映 (ブランチ作成 -> コミット -> PR)
+    # 7. GitHub に修正を反映 (ブランチ作成 -> コミット -> PR)
     fix_branch = f"fix/agent-{fix_id}"
     print(f"🌿 GitHubブランチ作成中: {fix_branch}")
     github.create_fix_branch(GITHUB_REPO, GITHUB_DEFAULT_BRANCH, fix_branch)
@@ -93,7 +99,7 @@ def main():
     
     print(f"✅ PR作成成功: {pr_url}")
     
-    # 7. PR URL を Firestore に書き戻す
+    # 8. PR URL を Firestore に書き戻す
     print("🔄 FirestoreにPR URLを更新中...")
     firestore.update_pr_url(fix_id, pr_url)
     
