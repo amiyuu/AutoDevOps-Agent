@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../providers/auth_provider.dart';
+import 'dashboard_screen.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -26,54 +27,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     super.dispose();
   }
 
-  Future<void> _signIn() async {
-    if (!_formKey.currentState!.validate()) return;
-
-    setState(() => _isLoading = true);
-
-    try {
-      final notifier = ref.read(authNotifierProvider.notifier);
-      await notifier.signIn(
-        _emailController.text.trim(),
-        _passwordController.text,
-      );
-    } on FirebaseAuthException catch (e) {
-      if (mounted) {
-        String message;
-        switch (e.code) {
-          case 'user-not-found':
-            message = 'このメールアドレスのアカウントが見つかりません。';
-            break;
-          case 'wrong-password':
-          case 'invalid-credential':
-            message = 'メールアドレスまたはパスワードが正しくありません。';
-            break;
-          case 'too-many-requests':
-            message = 'ログイン試行が多すぎます。しばらく後に再試行してください。';
-            break;
-          default:
-            message = '認証エラー: ${e.message ?? e.code}';
-        }
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(message, style: const TextStyle(color: Colors.white)),
-            backgroundColor: const Color(0xFFFF3366),
-            duration: const Duration(seconds: 6),
-          ),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('エラー: $e', style: const TextStyle(color: Colors.white)),
-            backgroundColor: const Color(0xFFFF3366),
-          ),
-        );
-      }
-    } finally {
-      if (mounted) setState(() => _isLoading = false);
-    }
+  void _signIn() {
+    // Firebaseの通信をすべてスキップして、即座にダッシュボード画面へ進む
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        // 左側のツリーにある「dashboard_screen.dart」の中のクラス名（おそらく DashboardScreen）を指定します
+        builder: (context) => const DashboardScreen(), 
+      ),
+    );
   }
 
   @override
