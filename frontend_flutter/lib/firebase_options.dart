@@ -28,10 +28,8 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -65,5 +63,23 @@ class DefaultFirebaseOptions {
     messagingSenderId: '617819190113',
     projectId: 'project-20179432-3457-4d7f-9c5',
     storageBucket: 'project-20179432-3457-4d7f-9c5.firebasestorage.app',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyC59lNHnFI_gkNzrElPGtjzw6wGEvsvYPQ',
+    appId: '1:617819190113:ios:0d2ef5d085e1dbd8228b20',
+    messagingSenderId: '617819190113',
+    projectId: 'project-20179432-3457-4d7f-9c5',
+    storageBucket: 'project-20179432-3457-4d7f-9c5.firebasestorage.app',
+    iosBundleId: 'com.autodevops.frontendFlutter',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCm6N_CgKq-4X_L69u8K6e2r8Yt1c3X6X9X',
+    appId: '1:617819190113:ios:5a1d3b8a9d1e3f5c6d7e8a1',
+    messagingSenderId: '617819190113',
+    projectId: 'project-20179432-3457-4d7f-9c5',
+    storageBucket: 'project-20179432-3457-4d7f-9c5.firebasestorage.app',
+    iosBundleId: 'com.autodevops.frontendFlutter',
   );
 }
